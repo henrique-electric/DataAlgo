@@ -8,6 +8,7 @@ list_t *create_list(void) {
 
   new_list->tail = NULL;
   new_list->head = NULL;
+  new_list->list_size = 0;
   return new_list;
 }
 
