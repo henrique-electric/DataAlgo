@@ -52,20 +52,6 @@ node_t *new_node(int data) {
   return node;
 }
 
-int list_pop(list_t *list) {
-  if (list == NULL)
-    return FAIL_POP;
-  
-  node_t *old_head = list->head;
-
-  list->head = old_head->previous;
-  list->head->next = NULL;
-  free(old_head);
-  
-  list->list_size--;
-  return SUCCESS_POP;
-}
-
 int list_destroy(list_t *list) {
   if (list == NULL)
     return FAILED_DESTROY;
